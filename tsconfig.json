@@ -1,3 +1,21 @@
 {
-  "extends": "@react-native/typescript-config/tsconfig.json"
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "commonjs",
+    "lib": ["ES2020"],                     /* Added: Include library definitions for modern JS features */
+    "jsx": "react-native",                 /* Added: Required for handling JSX syntax in React Native */
+    "moduleResolution": "node",            /* Added: Use Node's module resolution strategy */
+    "resolveJsonModule": true,             /* Added: Allows importing JSON files */
+    "rootDir": "./src",                  
+    "outDir": "./dist",
+    "esModuleInterop": true,             
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,                      
+    "skipLibCheck": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",                        /* Added: Include React component files */
+    "src/**/*.test.ts"                     /* Corrected: Ensures test files are within rootDir */
+  ]
 }
